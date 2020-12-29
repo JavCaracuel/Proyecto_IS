@@ -50,9 +50,9 @@
         
         
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-xs-4 col-xs-offset-4 col-xs-offset-4">
-                    <a href="index.php">
+                    <a href="inicio.php">
                         <img src="images/logo2.png" alt="" style="width: 100%; height: 100%;"/>
                     </a>
                 </div>
@@ -69,7 +69,7 @@
                     </table>
                 </div>
             </div>
-            <div class="row" >
+            <div class="row justify-content-center" >
                 <div class="col-xs-4 col-xs-offset-4 ">
                     
                     <form name="form1" method="post" action="#">

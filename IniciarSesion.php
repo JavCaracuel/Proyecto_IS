@@ -23,23 +23,7 @@
     <link rel="stylesheet" type="text/css" href="styles/general.css">
     <script type="text/javascript" src="scripts/cookies.js"></script>
     <style>
-    .tablaError{
-        border: 2px solid #b92c28;
-        width: 100%;
-        padding-top: 10px;
-        margin-bottom: 15px;
-    }
-    .tabla{
-        border: 1px solid gainsboro;
-        width: 100%;
-    }
-    td{
-        padding-left: 25%;
-    }
-    img{
-        padding-bottom: 20px;
-    }
-   
+
     
 </style>
 
@@ -50,9 +34,9 @@
         
         
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-xs-4 col-xs-offset-4 col-xs-offset-4">
-                    <a href="index.php">
+                    <a href="inicio.php">
                         <img src="images/logo2.png" alt="" style="width: 100%; height: 100%;"/>
                     </a>
                 </div>
@@ -63,7 +47,7 @@
                     </table>
                 </div>
             </div>
-            <div class="row" >
+            <div class="row justify-content-center" >
                 <div class="col-xs-4 col-xs-offset-4 ">
                     
                     <form name="form1" method="get" action="#">

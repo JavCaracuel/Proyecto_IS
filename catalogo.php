@@ -28,6 +28,25 @@ function insertaventa($_id_producto){
   }
 }
 
+function compruebaStock($_id_producto){
+  global $conexion;
+  $id_usuario = 1;
+  //Consulta para comprobar que hay stock para una nueva venta cuando pulsamos botón comprar:
+
+  $sql_stock = "SELECT * FROM productos WHERE id_producto = ".$_id_producto."";
+  $resultado1 = $conexion->query($sql_stock);
+
+  $row1 = $resultado1->fetch_assoc();
+
+    if(intval($row1['stock']) > 1)
+    {
+      return TRUE;
+    }else
+    {
+      return FALSE;
+    } 
+}
+
 ?>
 
 <!doctype html>
@@ -57,20 +76,29 @@ function insertaventa($_id_producto){
   <script src="https://kit.fontawesome.com/3188e1e786.js" crossorigin="anonymous"></script>
   <script src="scripts/cookies.js"></script>
   <script>
+
+
     $(document).click(function(e) {
       if (e.target.className == "claseclick") {
-        window.location.assign("catalogo.php?id_producto="+e.target.id);
-       <?php
-        if (isset($_GET['id_producto'])) {
-          echo insertaventa($_GET['id_producto']);
-        } else {
-          // Fallback behaviour goes here
-        }
+        window.location.assign("catalogo.php?id_producto=" + e.target.id);
         
-        ?>
-    
+        
+        <?php
+        if (isset($_GET['id_producto'])) {
+
+          if(compruebaStock($_GET['id_producto'])){
+            echo insertaventa($_GET['id_producto']);
+            ?>alert('Producto comprado correctamente');
+            <?php
+          }else {
+            ?>alert('No se ha podido realizar la compra, no hay stock suficiente.');<?php
+          }         
+         
+      }?>
+
+
       }
-    
+
     });
   </script>
 
@@ -148,11 +176,7 @@ function insertaventa($_id_producto){
             <p><span id="mujeres" class="categoriaRopa">Chaquetas</span></p>
           </a>
           <div class="row lista-top">
-            <div class="col-md-6 col-lg-6">
-              <input type="submit" href="catalogo.php" name="submit">
-              <img src=" images/galeria1-1.jpg" class="claseclick" id=1><?php siguiente(); ?></div>
-            </input>
-
+            <div class="col-md-6 col-lg-6 d-none d-md-block"> <img src=" images/galeria1-1.jpg" class="claseclick" id=1><?php siguiente(); ?></div>
             <div class=" col-md-6 col-lg-6 d-none d-md-block"><img src="images/galeria3-1.jpg" class="claseclick" id=2><?php siguiente(); ?></div>
 
           </div>
