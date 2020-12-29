@@ -102,7 +102,94 @@ require_once "conexionbbdd.php";
         <hr class="separador">
 
 
-        
+        <div class="row promociones">
+            <div class="col-12 justify-content-center" style="text-align: center;">
+                <h1>Oferta del dia</h1>
+            </div>
+            <div class="col-12 justify-content-center" style="text-align: center;">
+                <em>Una oferta increible para ti</em>
+            </div>
+            <div class="col-lg-4 col-md-6 oferta">
+                <div class="cartel-oferta">
+                    <p class="porcentaje-oferta">20%</p>
+                    <span class="off">OFF</span>
+                </div>
+                <img class="w-100" src="images/galeria2-1.jpg">
+                <div class="info-oferta">
+                    <h3>Americana</h3>
+                    <span class="precio-antiguo">320€</span>
+                    <span class="precio-nuevo">256€</span>
+                    <a id="boton-comprar-oferta" href="catalogo.html" class="boton-comprar-oferta">COMPRAR</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 oferta">
+                <div class="cartel-oferta">
+                    <p class="porcentaje-oferta">15%</p>
+                    <span class="off">OFF</span>
+                </div>
+                <img class="w-100" src="images/galeria3-1.jpg">
+                <div class="info-oferta">
+                    <h3>Jersey</h3>
+                    <span class="precio-antiguo">50€</span>
+                    <span class="precio-nuevo">42.5€</span>
+                    <a id="boton-comprar-oferta" href="catalogo.html" class="boton-comprar-oferta">COMPRAR</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 oferta">
+                <div class="cartel-oferta">
+                    <p class="porcentaje-oferta">20%</p>
+                    <span class="off">OFF</span>
+                </div>
+                <img class="w-100" src="images/galeria22-1.jpg">
+                <div class="info-oferta">
+                    <h3>Chaqueta</h3>
+                    <span class="precio-antiguo">120€</span>
+                    <span class="precio-nuevo">96€</span>
+                    <a id="boton-comprar-oferta" href="catalogo.html" class="boton-comprar-oferta">COMPRAR</a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 oferta">
+                <div class="cartel-oferta">
+                    <p class="porcentaje-oferta">15%</p>
+                    <span class="off">OFF</span>
+                </div>
+                <img class="w-100" src="images/galeria1-1.jpg">
+                <div class="info-oferta">
+                    <h3>Jersey</h3>
+                    <span class="precio-antiguo">70€</span>
+                    <span class="precio-nuevo">59.5€</span>
+                    <a id="boton-comprar-oferta" href="catalogo.html" class="boton-comprar-oferta">COMPRAR</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 oferta">
+                <div class="cartel-oferta">
+                    <p class="porcentaje-oferta">25%</p>
+                    <span class="off">OFF</span>
+                </div>
+                <img class="w-100" src="images/galeria6-1.jpg">
+                <div class="info-oferta">
+                    <h3>Pijama</h3>
+                    <span class="precio-antiguo">90€</span>
+                    <span class="precio-nuevo">67.5€</span>
+                    <a id="boton-comprar-oferta" href="catalogo.html" class="boton-comprar-oferta">COMPRAR</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 oferta">
+                <div class="cartel-oferta">
+                    <p class="porcentaje-oferta">20%</p>
+                    <span class="off">OFF</span>
+                </div>
+                <img class="w-100" src="images/galeria7-1.jpg">
+                <div class="info-oferta">
+                    <h3>Polo</h3>
+                    <span class="precio-antiguo">70€</span>
+                    <span class="precio-nuevo">66€</span>
+                    <a id="boton-comprar-oferta" href="catalogo.html" class="boton-comprar-oferta">COMPRAR</a>
+                </div>
+            </div>
+        </div>
+
 
     </main>
 
