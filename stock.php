@@ -1,31 +1,5 @@
 <?php
 
-$servername = "localhost";
-$database = "eac_prueba";
-$username = "root";
-$password = "root";
-
-function db()
-{
-    // Create connection
-    //Accedo a las vars globales
-    global  $servername, $username, $password, $database;
-    static $conn;
-    if ($conn === NULL) {
-        $conn = mysqli_connect($servername, $username, $password, $database);
-        if (!$conn) {
-            die("Connection failed: " . mysqli_connect_error());
-        }
-        echo "Connected successfully";
-    }
-
-    return $conn;
-}
-function prueba(){
-    echo "Hola prueba";
-}
-
-
 
 function updater($value, $id)
 {
