@@ -83,7 +83,48 @@
 
   <main>
 
+    <div class="container">
+      <div class="row galeria w-100">
+        <a href="#mujeres" class="no-dec d-sm-none" style="padding-left: 28%;">
+          <p><span id="mujeres" class="categoriaRopa">Chaquetas</span></p>
+        </a>
+        <div class="col-sm-6 col-md-6 col-lg-6 galeria-item"><img src="images/galeria-mujer.jpg"></div>
+        <div class="col-sm-6 col-md-6 col-lg-6 galeria-item">
+          <a href="#mujeres" class="no-dec d-none d-sm-block">
+            <p><span id="mujeres" class="categoriaRopa">Chaquetas</span></p>
+          </a>
+          <div class="row lista-top">
+            <div class="col-md-6 col-lg-6">
+              <input type="submit" href="catalogo.php" name="submit">
+              <img src=" images/galeria1-1.jpg" class="claseclick" id=1><?php siguiente(); ?></div>
+            </input>
 
+            <div class=" col-md-6 col-lg-6 d-none d-md-block"><img src="images/galeria3-1.jpg" class="claseclick" id=2><?php siguiente(); ?></div>
+
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-6  d-none d-md-block"><img src="images/galeria22-1.jpg" class="claseclick" id=3><?php siguiente(); ?></div>
+            <div class="col-md-6 col-lg-6  d-none d-md-block"><img src="images/galeria30-1.jpg" class="claseclick" id=4><?php siguiente(); ?></div>
+          </div>
+        </div>
+        <div class="col-12 justify-content-center"><span class="categoriaRopa">Camisetas</span></div>
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria17-1.jpg" class="claseclick" id=9><?php siguiente(); ?></div>
+
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria14-1.jpg" class="claseclick" id=10><?php siguiente(); ?></div>
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria32-1.jpg" class="claseclick" id=11><?php siguiente(); ?></div>
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria15-1.jpg" class="claseclick" id=12><?php siguiente(); ?></div>
+
+        <div class="col-12 justify-content-center"><span class="categoriaRopa">Complementos</span></div>
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria9-1.jpg" class="claseclick" id=17><?php siguiente(); ?></div>
+
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria12-1.jpg" class="claseclick" id=18><?php siguiente(); ?></div>
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria8-1.jpg" class="claseclick" id=19><?php siguiente(); ?></div>
+
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria20-1.jpg" class="claseclick" id=20><?php siguiente(); ?></div>
+
+
+       
+      </div>
   </main>
 
   <footer>
