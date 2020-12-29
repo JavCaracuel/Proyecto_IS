@@ -190,6 +190,24 @@ require_once "conexionbbdd.php";
             </div>
         </div>
 
+        <hr class="separador">
+
+        <div class="row categorias">
+            <div class="col-6">
+                <img src="images/moda-mujer.jpg" class="agranda-foto w-100">
+                <div class="info-categoria">
+                    <span class="categoria-tipo">MUJERES</span>
+                    <a id="boton-comprar-oferta" href="catalogo.html#mujeres" class="boton-comprar-cat">COMPRAR</a>
+                </div>
+            </div>
+            <div class="col-6">
+                <img src="images/moda-hombre.jpg" class="agranda-foto w-100">
+                <div class="info-categoria">
+                    <span class="categoria-tipo">HOMBRES</span>
+                    <a id="boton-comprar-oferta" href="catalogo.html#hombres" class="boton-comprar-cat">COMPRAR</a>
+                </div>
+            </div>
+        </div>
 
     </main>
 
