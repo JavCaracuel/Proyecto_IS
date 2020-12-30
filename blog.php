@@ -43,6 +43,23 @@
     </div>
   </div>
   <header>
+
+  <img src="images/logo2.png" class="mx-auto d-block logo">
+
+<div class="row justify-content-end">
+    
+    <div class="col-xs-1 col-xs-push-2 col-sm-push-3 col-md-push-4 col-lg-push-5" style="font-size: 20px;">
+        
+        <a href="IniciarSesion.php" class="btn btn-info" id="sesion" value= "Iniciar sesion" onclick="">Iniciar sesion/Registrarse
+        </a>
+        
+    </div>
+    <div class="col-xs-1 col-xs-push-4 col-sm-push-5 col-md-push-5 col-lg-push-6" id="cerrarSesion" onclick="logout();" hidden="true" style="padding-left:20px; font-size: 20px; ">
+        <a href="inicio.php" class="btn btn-danger" >Cerrar sesion</a>
+    </div>
+
+</div>
+
     <img src="images/logo2.png" class="mx-auto d-block logo">
     <nav class="navbar navbar-expand-md navbar-light">
       <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
