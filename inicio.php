@@ -138,7 +138,7 @@
                     <h3>Americana</h3>
                     <span class="precio-antiguo">320€</span>
                     <span class="precio-nuevo">256€</span>
-                    <a id="boton-comprar-oferta" href="catalogo.html" class="boton-comprar-oferta">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-oferta">COMPRAR</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 oferta">
@@ -164,7 +164,7 @@
                     <h3>Chaqueta</h3>
                     <span class="precio-antiguo">120€</span>
                     <span class="precio-nuevo">96€</span>
-                    <a id="boton-comprar-oferta" href="catalogo.html" class="boton-comprar-oferta">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-oferta">COMPRAR</a>
                 </div>
             </div>
 
@@ -178,7 +178,7 @@
                     <h3>Jersey</h3>
                     <span class="precio-antiguo">70€</span>
                     <span class="precio-nuevo">59.5€</span>
-                    <a id="boton-comprar-oferta" href="catalogo.html" class="boton-comprar-oferta">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-oferta">COMPRAR</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 oferta">
@@ -191,7 +191,7 @@
                     <h3>Pijama</h3>
                     <span class="precio-antiguo">90€</span>
                     <span class="precio-nuevo">67.5€</span>
-                    <a id="boton-comprar-oferta" href="catalogo.html" class="boton-comprar-oferta">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-oferta">COMPRAR</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 oferta">
@@ -204,7 +204,7 @@
                     <h3>Polo</h3>
                     <span class="precio-antiguo">70€</span>
                     <span class="precio-nuevo">66€</span>
-                    <a id="boton-comprar-oferta" href="catalogo.html" class="boton-comprar-oferta">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-oferta">COMPRAR</a>
                 </div>
             </div>
         </div>
@@ -216,14 +216,14 @@
                 <img src="images/moda-mujer.jpg" class="agranda-foto w-100">
                 <div class="info-categoria">
                     <span class="categoria-tipo">MUJERES</span>
-                    <a id="boton-comprar-oferta" href="catalogo.html#mujeres" class="boton-comprar-cat">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php#mujeres" class="boton-comprar-cat">COMPRAR</a>
                 </div>
             </div>
             <div class="col-6">
                 <img src="images/moda-hombre.jpg" class="agranda-foto w-100">
                 <div class="info-categoria">
                     <span class="categoria-tipo">HOMBRES</span>
-                    <a id="boton-comprar-oferta" href="catalogo.html#hombres" class="boton-comprar-cat">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php#hombres" class="boton-comprar-cat">COMPRAR</a>
                 </div>
             </div>
         </div>
@@ -245,7 +245,7 @@
                     <div class="p-2"><i class="fab fa-twitter"></i></div>
                     <div class="p-2"><i class="fab fa-facebook"></i></div>
                 </div>
-                <div class="p-2">© 2020 Copyright: <a href="inicio.html">Hipnos.com</a></div>
+                <div class="p-2">© 2020 Copyright: <a href="inicio.php">Hipnos.com</a></div>
             </div>
         </div>
     </footer>
@@ -257,7 +257,6 @@
             $("#sesion").html("Bienvenido <?php echo $nombreRecogido ?>");
             $('#sesion').click(function () {return false;});
             $('#cerrarSesion').removeAttr('hidden');
-           
          }
          
          //Llamamos a un archivo externo para ejecutar la funcion de cerrar sesion

@@ -250,7 +250,7 @@ function compruebaStock($_id_producto){
           <div class="p-2"><i class="fab fa-twitter"></i></div>
           <div class="p-2"><i class="fab fa-facebook"></i></div>
         </div>
-        <div class="p-2">© 2020 Copyright: <a href="inicio.html">Hipnos.com</a></div>
+        <div class="p-2">© 2020 Copyright: <a href="inicio.php">Hipnos.com</a></div>
       </div>
     </div>
   </footer>
