@@ -53,7 +53,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xs-4 col-xs-offset-4 col-xs-offset-4">
-                <a href="inicio.php">
+                <a href="index.php">
                     <img src="images/logo2.png" alt="" style="width: 100%; height: 100%;" />
                 </a>
             </div>
@@ -189,7 +189,7 @@
         if ($resultados->num_rows === 0) {
             $insertar = "INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellidos`, `direccion`, `email`, `password`) VALUES (NULL, '$name', '$apellidos', '$direccion', '$email', '$password');";
             mysqli_query($conexion, $insertar);
-            echo "<script>window.location='inicio.php'</script>;";
+            echo "<script>window.location='index.php'</script>;";
             session_start();
             $_SESSION['name'] = $name;
         } else if ($resultados->num_rows > 0) {

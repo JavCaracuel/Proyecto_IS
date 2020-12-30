@@ -1,3 +1,9 @@
+<?php session_start();
+    if (isset($_SESSION['name'])) {
+        $nombreRecogido = $_SESSION['name'];
+    } else $nombreRecogido = "";
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -27,13 +33,7 @@
 
 <body>
 
-        <?php //Recibir si proviene de crear cuenta o iniciar sesio
-                //y asi porder mostrar su nombre
-            session_start();
-        if (isset($_SESSION['name'])) {
-            $nombreRecogido = $_SESSION['name'];
-        } else $nombreRecogido = "";
-        ?>
+        
 
     <!--//BLOQUE COOKIES-->
     <div id="barraaceptacion" style="display: block;">
@@ -57,7 +57,7 @@
                 
             </div>
             <div class="col-xs-1 col-xs-push-4 col-sm-push-5 col-md-push-5 col-lg-push-6" id="cerrarSesion" onclick="logout();" hidden="true" style="padding-left:20px; font-size: 20px; ">
-                <a href="inicio.php" class="btn btn-danger" >Cerrar sesion</a>
+                <a href="index.php" class="btn btn-danger" >Cerrar sesion</a>
             </div>
 
         </div>
@@ -66,7 +66,7 @@
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link activo" href="inicio.php">Inicio</a>
+                        <a class="nav-link activo" href="index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="catalogo.php">Catalogo</a>
@@ -246,7 +246,7 @@
                     <div class="p-2"><i class="fab fa-twitter"></i></div>
                     <div class="p-2"><i class="fab fa-facebook"></i></div>
                 </div>
-                <div class="p-2">© 2020 Copyright: <a href="inicio.php">Hipnos.com</a></div>
+                <div class="p-2">© 2020 Copyright: <a href="index.php">Hipnos.com</a></div>
             </div>
         </div>
     </footer>
@@ -264,9 +264,9 @@
          function logout() {
             var xhr = new XMLHttpRequest();
             xhr.onload = function() {
-                document.location = 'inicio.php';
+                document.location = 'index.php';
             }
-            xhr.open('GET', 'logout.php', true);
+            xhr.open('POST', 'logout.php', true);
             xhr.send();
         }
     </script>

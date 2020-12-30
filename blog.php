@@ -1,3 +1,10 @@
+<?php session_start();
+    if (isset($_SESSION['name'])) {
+        $nombreRecogido = $_SESSION['name'];
+    } else $nombreRecogido = "";
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -26,13 +33,6 @@
 
 <body>
 
-  <?php //Recibir si proviene de crear cuenta o iniciar sesio
-                  //y asi porder mostrar su nombre
-    session_start();
-    $nombreRecogido =$_SESSION['name'];
-          
-  ?>
-
   <!--//BLOQUE COOKIES-->
   <div id="barraaceptacion" style="display: block;">
     <div class="inner">
@@ -44,28 +44,14 @@
   </div>
   <header>
 
-  <img src="images/logo2.png" class="mx-auto d-block logo">
-
-<div class="row justify-content-end">
-    
-    <div class="col-xs-1 col-xs-push-2 col-sm-push-3 col-md-push-4 col-lg-push-5" style="font-size: 20px;">
-        
-        <a href="IniciarSesion.php" class="btn btn-info" id="sesion" value= "Iniciar sesion" onclick="">Iniciar sesion/Registrarse
-        </a>
-        
-    </div>
-    <div class="col-xs-1 col-xs-push-4 col-sm-push-5 col-md-push-5 col-lg-push-6" id="cerrarSesion" onclick="logout();" hidden="true" style="padding-left:20px; font-size: 20px; ">
-        <a href="inicio.php" class="btn btn-danger" >Cerrar sesion</a>
-    </div>
-
-</div>
+  
 
     <img src="images/logo2.png" class="mx-auto d-block logo">
     <nav class="navbar navbar-expand-md navbar-light">
       <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <a class="nav-link" href="inicio.php">Inicio</a>
+            <a class="nav-link" href="index.php">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="catalogo.php">Catalogo</a>
@@ -154,7 +140,7 @@
           <div class="p-2"><i class="fab fa-twitter"></i></div>
           <div class="p-2"><i class="fab fa-facebook"></i></div>
         </div>
-        <div class="p-2">© 2020 Copyright: <a href="inicio.php">Hipnos.com</a></div>
+        <div class="p-2">© 2020 Copyright: <a href="index.php">Hipnos.com</a></div>
       </div>
     </div>
   </footer>
@@ -173,7 +159,7 @@
          function logout() {
             var xhr = new XMLHttpRequest();
             xhr.onload = function() {
-                document.location = 'inicio.php';
+                document.location = 'index.php';
             }
             xhr.open('GET', 'logout.php', true);
             xhr.send();

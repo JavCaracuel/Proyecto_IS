@@ -33,7 +33,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xs-4 col-xs-offset-4 col-xs-offset-4">
-                    <a href="inicio.php">
+                    <a href="index.php">
                         <img src="images/logo2.png" alt="" style="width: 100%; height: 100%;"/>
                     </a>
                 </div>
@@ -96,7 +96,7 @@
             
             
            if($fila && $email != ""){
-               echo"<script>window.location='inicio.php'</script>;";
+               echo"<script>window.location='index.php'</script>;";
                session_start();
                $name = $fila[1];
                $_SESSION['name']=$name;
