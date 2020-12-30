@@ -5,15 +5,17 @@ include 'conbbdd.php';
 $resultado = $conexion->query("SELECT * FROM `productos`  ORDER BY `productos`.`genero`  DESC, `productos`.`id_producto`  ASC;");
 
 
-function siguiente(){
+function siguiente()
+{
   global $resultado;
   $row = $resultado->fetch_assoc();
   echo  $row["nombre"] . ".<br> Precio:" . $row["precio"] . "€.<br> Stock:" . $row["stock"];
 }
 
 
-function insertaventa($_id_producto){
-  
+function insertaventa($_id_producto)
+{
+
   global $conexion;
   $id_usuario = 1;
   //Consulta para insertar nueva venta cuando pulsamos botón comprar:
@@ -28,23 +30,22 @@ function insertaventa($_id_producto){
   }
 }
 
-function compruebaStock($_id_producto){
+function compruebaStock($_id_producto)
+{
   global $conexion;
   $id_usuario = 1;
   //Consulta para comprobar que hay stock para una nueva venta cuando pulsamos botón comprar:
 
-  $sql_stock = "SELECT * FROM productos WHERE id_producto = ".$_id_producto."";
+  $sql_stock = "SELECT * FROM productos WHERE id_producto = " . $_id_producto . "";
   $resultado1 = $conexion->query($sql_stock);
 
   $row1 = $resultado1->fetch_assoc();
 
-    if(intval($row1['stock']) > 1)
-    {
-      return TRUE;
-    }else
-    {
-      return FALSE;
-    } 
+  if (intval($row1['stock']) > 1) {
+    return TRUE;
+  } else {
+    return FALSE;
+  }
 }
 
 ?>
@@ -55,10 +56,12 @@ function compruebaStock($_id_producto){
 <head>
 
   <?php //Recibir si proviene de crear cuenta o iniciar sesio
-                //y asi porder mostrar su nombre
-            session_start();
-            $nombreRecogido =$_SESSION['name'];
-        
+  //y asi porder mostrar su nombre
+  session_start();
+  if (isset($_SESSION['name'])) {
+    $nombreRecogido = $_SESSION['name'];
+  } else $nombreRecogido = "";
+
   ?>
 
   <!-- Required meta tags -->
@@ -76,25 +79,23 @@ function compruebaStock($_id_producto){
   <script src="https://kit.fontawesome.com/3188e1e786.js" crossorigin="anonymous"></script>
   <script src="scripts/cookies.js"></script>
   <script>
-
-
     $(document).click(function(e) {
       if (e.target.className == "claseclick") {
         window.location.assign("catalogo.php?id_producto=" + e.target.id);
-        
-        
+
+
         <?php
         if (isset($_GET['id_producto'])) {
 
-          if(compruebaStock($_GET['id_producto'])){
+          if (compruebaStock($_GET['id_producto'])) {
             echo insertaventa($_GET['id_producto']);
-            ?>alert('Producto comprado correctamente');
-            <?php
-          }else {
-            ?>alert('No se ha podido realizar la compra, no hay stock suficiente.');<?php
-          }         
-         
-      }?>
+        ?>alert('Producto comprado correctamente');
+        <?php
+          } else {
+        ?>alert('No se ha podido realizar la compra, no hay stock suficiente.');
+      <?php
+          }
+        } ?>
 
 
       }
@@ -123,18 +124,18 @@ function compruebaStock($_id_producto){
   <header>
     <img src="images/logo2.png" class="mx-auto d-block logo">
     <div class="row justify-content-end">
-            
-            <div class="col-xs-1 col-xs-push-2 col-sm-push-3 col-md-push-4 col-lg-push-5" style="font-size: 20px;">
-                
-                <a href="IniciarSesion.php" class="btn btn-info" id="sesion" value= "Iniciar sesion" onclick="">Iniciar sesion/Registrarse
-                </a>
-                
-            </div>
-            <div class="col-xs-1 col-xs-push-4 col-sm-push-5 col-md-push-5 col-lg-push-6" id="cerrarSesion" onclick="logout();" hidden="true" style="padding-left:20px; font-size: 20px; ">
-                <a href="inicio.php" class="btn btn-danger" >Cerrar sesion</a>
-            </div>
 
-        </div>
+      <div class="col-xs-1 col-xs-push-2 col-sm-push-3 col-md-push-4 col-lg-push-5" style="font-size: 20px;">
+
+        <a href="IniciarSesion.php" class="btn btn-info" id="sesion" value="Iniciar sesion" onclick="">Iniciar sesion/Registrarse
+        </a>
+
+      </div>
+      <div class="col-xs-1 col-xs-push-4 col-sm-push-5 col-md-push-5 col-lg-push-6" id="cerrarSesion" onclick="logout();" hidden="true" style="padding-left:20px; font-size: 20px; ">
+        <a href="inicio.php" class="btn btn-danger">Cerrar sesion</a>
+      </div>
+
+    </div>
 
     <nav class="navbar navbar-expand-md navbar-light">
       <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
@@ -250,31 +251,32 @@ function compruebaStock($_id_producto){
           <div class="p-2"><i class="fab fa-twitter"></i></div>
           <div class="p-2"><i class="fab fa-facebook"></i></div>
         </div>
-        <div class="p-2">© 2020 Copyright: <a href="inicio.html">Hipnos.com</a></div>
+        <div class="p-2">© 2020 Copyright: <a href="inicio.php">Hipnos.com</a></div>
       </div>
     </div>
   </footer>
 
   <script>
-         
-         //Si viene de crear una cuenta o iniciar sesion el boton cambia y le da la bienvenida al usuario    
-         if(<?php echo $nombreRecogido != "" ?>){
-            $("#sesion").html("Bienvenido <?php echo $nombreRecogido ?>");
-            $('#sesion').click(function () {return false;});
-            $('#cerrarSesion').removeAttr('hidden');
-           
-         }
-         
-         //Llamamos a un archivo externo para ejecutar la funcion de cerrar sesion
-         function logout() {
-            var xhr = new XMLHttpRequest();
-            xhr.onload = function() {
-                document.location = 'inicio.php';
-            }
-            xhr.open('GET', 'logout.php', true);
-            xhr.send();
-        }
-    </script>
+    //Si viene de crear una cuenta o iniciar sesion el boton cambia y le da la bienvenida al usuario    
+    if (<?php echo $nombreRecogido != "" ?>) {
+      $("#sesion").html("Bienvenido <?php echo $nombreRecogido ?>");
+      $('#sesion').click(function() {
+        return false;
+      });
+      $('#cerrarSesion').removeAttr('hidden');
+
+    }
+
+    //Llamamos a un archivo externo para ejecutar la funcion de cerrar sesion
+    function logout() {
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function() {
+        document.location = 'inicio.php';
+      }
+      xhr.open('GET', 'logout.php', true);
+      xhr.send();
+    }
+  </script>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
