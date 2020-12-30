@@ -30,9 +30,6 @@
 </head>
 <body>
         
-        
-        
-        
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xs-4 col-xs-offset-4 col-xs-offset-4">
@@ -50,7 +47,7 @@
             <div class="row justify-content-center" >
                 <div class="col-xs-4 col-xs-offset-4 ">
                     
-                    <form name="form1" method="get" action="#">
+                    <form name="form1" method="post" action="#">
                         
                         <table class="tabla">
                             <tr><td><h3>Iniciar sesión</h3></td> 
@@ -85,13 +82,15 @@
         include 'conbbdd.php';
         
         
-        
-        
-        $email = $_GET['email'];       
-        $password = $_GET['password'];
+        if (isset($_POST['email'])) {
+            $email = $_POST['email'];
+        }else $email = "";
+        if (isset($_POST['password'])) {
+            $password = $_POST['password'];
+        } else $password = "";
         
         $consulta = "SELECT `email`, `nombre`, `password` FROM `usuarios` WHERE email = '$email' AND password = '$password' ";
-        $resultados = mysqli_query($conexion, $consulta);
+        $resultados = mysqli_query($conexion, $consulta) or  die(mysqli_error($conexion));
             
         $fila = mysqli_fetch_row($resultados);
             

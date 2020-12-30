@@ -23,142 +23,198 @@
     <link rel="stylesheet" type="text/css" href="styles/general.css">
     <script type="text/javascript" src="scripts/cookies.js"></script>
     <style>
-    
-    .tablaError{
-        border: 2px solid #b92c28;
-        width: 100%;
-        padding-top: 10px;
-        margin-bottom: 15px;
-    }
-    .tabla{
-        border: 1px solid gainsboro;
-        width: 100%;
-    }
-    td{
-        padding-left: 25%;
-    }
-    img{
-        padding-bottom: 20px;
-    }
-   
-    
-</style>
+        .tablaError {
+            border: 2px solid #b92c28;
+            width: 100%;
+            padding-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .tabla {
+            border: 1px solid gainsboro;
+            width: 100%;
+        }
+
+        td {
+            padding-left: 25%;
+        }
+
+        img {
+            padding-bottom: 20px;
+        }
+    </style>
 
 </head>
+
 <body>
-        
-        
-        
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xs-4 col-xs-offset-4 col-xs-offset-4">
-                    <a href="inicio.php">
-                        <img src="images/logo2.png" alt="" style="width: 100%; height: 100%;"/>
-                    </a>
-                </div>
-                <div class="col-xs-4 col-xs-offset-4" hidden="true;" id="error" >
-                    <table class="tablaError">
-                        <tr><td style="color: #b92c28; font-size: large; padding-top: 10px;">Ha surgido un problema</td></tr>
-                        <tr><td style="padding-bottom: 10px;">Debes rellenar todos los campos</td></tr>
-                    </table>
-                </div>
-                <div class="col-xs-4 col-xs-offset-4" hidden="true;" id="errorEmail" >
-                    <table class="tablaError">
-                        <tr><td style="color: #b92c28; font-size: large; padding-top: 10px;">Ha surgido un problema</td></tr>
-                        <tr><td style="padding-bottom: 10px;">Ya existe una cuenta</td></tr>
-                    </table>
-                </div>
+
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xs-4 col-xs-offset-4 col-xs-offset-4">
+                <a href="inicio.php">
+                    <img src="images/logo2.png" alt="" style="width: 100%; height: 100%;" />
+                </a>
             </div>
-            <div class="row justify-content-center" >
-                <div class="col-xs-4 col-xs-offset-4 ">
-                    
-                    <form name="form1" method="post" action="#">
-                        
-                        <table class="tabla">
-                            <tr><td><h3>Crear cuenta</h3></td></tr> 
-                            
-                            <tr><td>Nombre</td></tr>
-                            <tr><td><input type="text" name="name"></td></tr>    
-                                
-                            <tr><td>Correo electrónico</td></tr>
-                            <tr><td><input type="email" name="email"></td></tr>
-                            
-                            <tr><td>Contraseña</td></tr>
-                            <tr><td><input type="password" name="password"></td></tr>
-                            
-                            <tr>
-                                <td><input type="submit" name="enviar" id="enviar" value="Enviar">
-                                <input type="reset" name="Borrar" id="Borrar" value="Borrar"   style="margin-top: 10px; margin-bottom: 20px;"></td>
-                            </tr>
-                            
-                            
-                            
-                            <tr><td style="padding-bottom: 20px; margin-top: 20px;">¿Ya tiene una cuenta?
-                            <a href="IniciarSesion.php">Inicia sesion</a></td></tr>
-                            
-                        </table>
-                        
-                        
-                    </form>
-                    
-                </div>
+            <div class="col-xs-4 col-xs-offset-4" hidden="true;" id="error">
+                <table class="tablaError">
+                    <tr>
+                        <td style="color: #b92c28; font-size: large; padding-top: 10px;">Ha surgido un problema</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-bottom: 10px;">Debes rellenar todos los campos</td>
+                    </tr>
+                </table>
             </div>
-            
+            <div class="col-xs-4 col-xs-offset-4" hidden="true;" id="errorEmail">
+                <table class="tablaError">
+                    <tr>
+                        <td style="color: #b92c28; font-size: large; padding-top: 10px;">Ha surgido un problema</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-bottom: 10px;">Ya existe una cuenta</td>
+                    </tr>
+                </table>
+            </div>
         </div>
-        
-        
-        
-        <?php
-        include 'conbbdd.php';
-        
-            
-            
-        
-        $name = $_POST['name'];
-        $email = $_POST['email'];       
+        <div class="row justify-content-center">
+            <div class="col-xs-4 col-xs-offset-4 ">
+
+                <form name="form1" method="post" action="#">
+
+                    <table class="tabla">
+                        <tr>
+                            <td>
+                                <h3>Crear cuenta</h3>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Nombre</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="name"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Apellidos</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="apellidos"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Dirección</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="direccion"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Correo electrónico</td>
+                        </tr>
+                        <tr>
+                            <td><input type="email" name="email"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Contraseña</td>
+                        </tr>
+                        <tr>
+                            <td><input type="password" name="password"></td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td><input type="submit" name="enviar" id="enviar" value="enviar">
+                                <input type="reset" name="Borrar" id="Borrar" value="Borrar" style="margin-top: 10px; margin-bottom: 20px;"></td>
+                        </tr>
+
+
+
+                        <tr>
+                            <td style="padding-bottom: 20px; margin-top: 20px;">¿Ya tiene una cuenta?
+                                <a href="IniciarSesion.php">Inicia sesion</a></td>
+                        </tr>
+
+                    </table>
+
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <?php
+    include 'conbbdd.php';
+
+    if (isset($_POST['email'])) {
+        $email = $_POST['email'];
+    } else $email = "";
+    if (isset($_POST['password'])) {
         $password = $_POST['password'];
-        
-        if($email != "" && $name != "" && $password != ""){
-               
-            $busqueda = "SELECT `email` FROM `usuarios` WHERE email = '$email'";
-            
-            //Si ya existe ese correo no deja crear un usuario
-            
-            $resultados = mysqli_query($conexion, $busqueda);
-            
-            
-            // No existe el usuario
-            if($resultados->num_rows === 0){
-                $insertar = "INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellidos`, `direccion`, `email`, `password`) VALUES (NULL, '$name', '', NULL, '$email', '$password');";
-                mysqli_query($conexion, $insertar);
-                echo"<script>window.location='inicio.php'</script>;";
-                session_start();
-                $_SESSION['name']=$name; 
+    } else $password = "";
+    if (isset($_POST['name'])) {
+        $name = $_POST['name'];
+    } else $name = "";
+    if (isset($_POST['apellidos'])) {
+        $apellidos = $_POST['apellidos'];
+    } else $apellidos = "";
+    if (isset($_POST['direccion'])) {
+        $direccion = $_POST['direccion'];
+    } else $direccion = "";
 
-            }else if ($resultados->num_rows > 0){
-                echo"<script>$('#error').show();</script>;";
-            }
 
-        }else{
-            echo"<script>$('#error').show();</script>;";
+    if (isset($_POST['enviar'])) {
+        $enviar = $_POST['enviar'];
+    } else $enviar = "";
+
+
+    if ($email != "" && $name != "" && $password != "") {
+
+        $busqueda = "SELECT `email` FROM `usuarios` WHERE email = '$email'";
+
+        //Si ya existe ese correo no deja crear un usuario
+
+        $resultados = mysqli_query($conexion, $busqueda);
+
+
+        // No existe el usuario
+        if ($resultados->num_rows === 0) {
+            $insertar = "INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellidos`, `direccion`, `email`, `password`) VALUES (NULL, '$name', '$apellidos', '$direccion', '$email', '$password');";
+            mysqli_query($conexion, $insertar);
+            echo "<script>window.location='inicio.php'</script>;";
+            session_start();
+            $_SESSION['name'] = $name;
+        } else if ($resultados->num_rows > 0) {
+            echo "<script>$('#error').show();</script>;";
         }
-               
-            
-               
-        if($_POST['enviar'] && ($email == "" || $name == "" || $password == "")){
-            echo"<script>$('#error').show();</script>;";
-        }
-            
-        
-        
-           
-            mysqli_close($conexion);
-        
-        
-        ?>
+    } else {
+        echo "<script>$('#error').show();</script>;";
+    }
 
-        
-        
+
+
+    if ($enviar && ($email == "" || $name == "" || $password == "")) {
+        echo "<script>$('#error').show();</script>;";
+    }
+
+
+
+
+    mysqli_close($conexion);
+
+
+    ?>
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

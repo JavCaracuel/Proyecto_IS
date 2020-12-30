@@ -30,8 +30,9 @@
         <?php //Recibir si proviene de crear cuenta o iniciar sesio
                 //y asi porder mostrar su nombre
             session_start();
-            $nombreRecogido =$_SESSION['name'];
-        
+        if (isset($_SESSION['name'])) {
+            $nombreRecogido = $_SESSION['name'];
+        } else $nombreRecogido = "";
         ?>
 
     <!--//BLOQUE COOKIES-->
@@ -151,7 +152,7 @@
                     <h3>Jersey</h3>
                     <span class="precio-antiguo">50€</span>
                     <span class="precio-nuevo">42.5€</span>
-                    <a id="boton-comprar-oferta" href="catalogo.html" class="boton-comprar-oferta">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-oferta">COMPRAR</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 oferta">
