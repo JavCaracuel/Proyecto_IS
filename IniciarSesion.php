@@ -30,7 +30,6 @@
 </head>
 <body>
         
-        
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xs-4 col-xs-offset-4 col-xs-offset-4">
@@ -90,16 +89,6 @@
             $password = $_POST['password'];
         } else $password = "";
         
-
-        // if ($_POST['email'] == "") {
-        //     $email = " ";
-        // }
-        // if ($_POST['password'] == "") {
-        //     $password = " ";
-        // }
-
-
-
         $consulta = "SELECT `email`, `nombre`, `password` FROM `usuarios` WHERE email = '$email' AND password = '$password' ";
         $resultados = mysqli_query($conexion, $consulta) or  die(mysqli_error($conexion));
             
