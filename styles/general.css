@@ -306,6 +306,23 @@ hr{
     transition: all 0.3s ease 0s;
     text-decoration: none;
 }
+
+.boton-comprar-producto{
+    background: black;
+    width: 40%;
+    margin-top: 12px;
+    font-size: 10px;
+    font-weight: 200;
+    color: #fff;
+    display: block;
+    height: 25px;
+    text-align: center;
+    padding-top: 5px;
+    margin-left: 30%;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
 .boton-comprar-cat{
     background: rgb(49, 49, 49);
     color: white;
