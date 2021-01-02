@@ -4,18 +4,11 @@
     } else $nombreRecogido = "";
 ?>
 
+
+
 <?php
 include 'conbbdd.php';
 
-//$sql = "SELECT * FROM `productos`";
-$resultado = $conexion->query("SELECT * FROM `productos`  ORDER BY `productos`.`genero`  DESC, `productos`.`id_producto`  ASC;");
-
-
-
-
-
-?>
-<?php
 if (isset($_GET['id_producto'])) {
 
   if (compruebaStock($_GET['id_producto'])) {
@@ -27,6 +20,19 @@ if (isset($_GET['id_producto'])) {
 <?php
   }
 }
+
+
+
+
+
+
+//$sql = "SELECT * FROM `productos`";
+$resultado = $conexion->query("SELECT * FROM `productos`  ORDER BY `productos`.`genero`  DESC, `productos`.`id_producto`  ASC;");
+
+
+
+
+
 
 
 
@@ -98,15 +104,7 @@ function compruebaStock($_id_producto)
 
   <script src="https://kit.fontawesome.com/3188e1e786.js" crossorigin="anonymous"></script>
   <script src="scripts/cookies.js"></script>
-  <script>
-    $(document).click(function(e) {
-      if (e.target.className == "claseclick") {
-        window.location.assign("catalogo.php?id_producto=" + e.target.id);
 
-      }
-
-    });
-  </script>
 
 
   <!-- Bootstrap CSS -->
@@ -182,64 +180,64 @@ function compruebaStock($_id_producto)
             <p><span id="mujeres" class="categoriaRopa">Chaquetas</span></p>
           </a>
           <div class="row lista-top">
-            <div class="col-md-6 col-lg-6 d-none d-md-block"> <img src=" images/galeria1-1.jpg" class="claseclick" id=1><div class="info-oferta">
+            <div class="col-md-6 col-lg-6 d-none d-md-block"> <img src=" images/galeria1-1.jpg"   id=1><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=1" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
-            <div class=" col-md-6 col-lg-6 d-none d-md-block"><img src="images/galeria3-1.jpg" class="claseclick" id=2><div class="info-oferta">
+            <div class=" col-md-6 col-lg-6 d-none d-md-block"><img src="images/galeria3-1.jpg"   id=2><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=2" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
 
           </div>
           <div class="row">
-            <div class="col-md-6 col-lg-6  d-none d-md-block"><img src="images/galeria22-1.jpg" class="claseclick" id=3><div class="info-oferta">
+            <div class="col-md-6 col-lg-6  d-none d-md-block"><img src="images/galeria22-1.jpg"   id=3><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=3" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
-            <div class="col-md-6 col-lg-6  d-none d-md-block"><img src="images/galeria30-1.jpg" class="claseclick" id=4><div class="info-oferta">
+            <div class="col-md-6 col-lg-6  d-none d-md-block"><img src="images/galeria30-1.jpg"   id=4><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=4" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
           </div>
         </div>
         <div class="col-12 justify-content-center"><span class="categoriaRopa">Camisetas</span></div>
-        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria17-1.jpg" class="claseclick" id=9><div class="info-oferta">
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria17-1.jpg"   id=9><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=9" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
 
-        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria14-1.jpg" class="claseclick" id=10><div class="info-oferta">
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria14-1.jpg"   id=10><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=10" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
-        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria32-1.jpg" class="claseclick" id=11><div class="info-oferta">
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria32-1.jpg"   id=11><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=11" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
-        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria15-1.jpg" class="claseclick" id=12><div class="info-oferta">
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria15-1.jpg"   id=12><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=12" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
 
         <div class="col-12 justify-content-center"><span class="categoriaRopa">Complementos</span></div>
-        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria9-1.jpg" class="claseclick" id=17><div class="info-oferta">
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria9-1.jpg"   id=17><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=17" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
 
-        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria12-1.jpg" class="claseclick" id=18><div class="info-oferta">
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria12-1.jpg"   id=18><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=18" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
-        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria8-1.jpg" class="claseclick" id=19><div class="info-oferta">
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria8-1.jpg"   id=19><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=19" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
 
-        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria20-1.jpg" class="claseclick" id=20><div class="info-oferta">
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria20-1.jpg"   id=20><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=20" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
 
 
@@ -248,65 +246,65 @@ function compruebaStock($_id_producto)
             <p><span id="hombres" class="categoriaRopa">Chaquetas</span></p>
           </a>
           <div class="row lista-top">
-            <div class="col-md-6 col-lg-6 d-none d-sm-block"><img src="images/galeria2-1.jpg" class="claseclick" id=5><div class="info-oferta">
+            <div class="col-md-6 col-lg-6 d-none d-sm-block"><img src="images/galeria2-1.jpg"   id=5><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=5" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
-            <div class="col-md-6 col-lg-6 d-none d-md-block"><img src="images/galeria10-1.jpg" class="claseclick" id=6><div class="info-oferta">
+            <div class="col-md-6 col-lg-6 d-none d-md-block"><img src="images/galeria10-1.jpg"   id=6><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=6" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
           </div>
           <div class="row">
 
-            <div class="col-md-6 col-lg-6 d-none d-md-block"><img src="images/galeria16-1.jpg" class="claseclick" id=7><div class="info-oferta">
+            <div class="col-md-6 col-lg-6 d-none d-md-block"><img src="images/galeria16-1.jpg"   id=7><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=7" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
-            <div class="col-md-6 col-lg-6 d-none d-md-block"><img src="images/galeria25-1.jpg" class="claseclick" id=8><div class="info-oferta">
+            <div class="col-md-6 col-lg-6 d-none d-md-block"><img src="images/galeria25-1.jpg"   id=8><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=8" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6 galeria-item"><img src="images/galeria-hombre.jpg"></div>
         <div class="col-12 justify-content-center"><span class="categoriaRopa">Camisetas</span></div>
-        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria6-1.jpg" class="claseclick" id=13><div class="info-oferta">
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria6-1.jpg"   id=13><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=13" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
-        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria7-1.jpg" class="claseclick" id=14><div class="info-oferta">
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria7-1.jpg"   id=14><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=14" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
-        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria19-1.jpg" class="claseclick" id=15><div class="info-oferta">
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria19-1.jpg"   id=15><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=15" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
 
-        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria26-1.jpg" class="claseclick" id=16><div class="info-oferta">
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria26-1.jpg"   id=16><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=16" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
 
 
 
         <div class="col-12 justify-content-center"><span class="categoriaRopa">Complementos</span></div>
-        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria13-1.jpg" class="claseclick" id=21><div class="info-oferta">
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria13-1.jpg"   id=21><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=21" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
-        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria18-1.jpg" class="claseclick" id=22><div class="info-oferta">
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria18-1.jpg"   id=22><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=22" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
-        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria21-1.jpg" class="claseclick" id=23><div class="info-oferta">
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria21-1.jpg"   id=23><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=23" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
-        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria23-1.jpg" class="claseclick" id=24><div class="info-oferta">
+        <div class="col-sm-6 col-md-3 col-lg-3 galeria-item"><img src="images/galeria23-1.jpg"   id=24><div class="info-oferta">
                     <?php siguiente(); ?>
-                    <a id="boton-comprar-oferta" href="catalogo.php" class="boton-comprar-producto">COMPRAR</a>
+                    <a id="boton-comprar-oferta" href="catalogo.php?id_producto=24" class="boton-comprar-producto">COMPRAR</a>
             </div></div>
 
 
